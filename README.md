@@ -1,0 +1,1 @@
+# MERN-Static-Assets
