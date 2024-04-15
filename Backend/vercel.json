@@ -1,6 +1,8 @@
 {
-    "rewrites": {
-        "source": "/Public(.*)",
-        "destination": "/Public/"
-    }
+    "rewrites": [
+        {
+            "source": "/Public(.*)",
+            "destination": "/Public/"
+        }
+    ]
 }
