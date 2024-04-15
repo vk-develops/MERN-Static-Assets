@@ -1,7 +1,18 @@
 import express from "express";
+import path from "path";
 
 const app = express();
 const PORT = process.env.PORT || 8080;
+
+// Serving static files from the 'Public' directory
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, "Public")));
+
+app.use("/Images", express.static(path.join(__dirname, "Public", "Images")));
+app.use(
+    "/Images/WeatherImg",
+    express.static(path.join(__dirname, "Public", "WeatherImages"))
+);
 
 //HTTP GET Method Test
 app.get("/", (req, res) => {
