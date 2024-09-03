@@ -13,6 +13,10 @@ app.use(
     "/Images/WeatherImg",
     express.static(path.join(__dirname, "Public", "WeatherImages"))
 );
+app.use(
+    "/Images/PortfolioImages",
+    express.static(path.join(__dirname, "Public", "PortfolioImages"))
+);
 
 //HTTP GET Method Test
 app.get("/", (req, res) => {
