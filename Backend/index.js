@@ -18,6 +18,11 @@ app.use(
     express.static(path.join(__dirname, "Public", "PortfolioImages"))
 );
 
+app.use(
+    "/vk-develops",
+    express.static(path.join(__dirname, "Public", "vk-develops"))
+);
+
 //HTTP GET Method Test
 app.get("/", (req, res) => {
     res.status(200).json({ success: true, message: "HTTP Method Success!" });
